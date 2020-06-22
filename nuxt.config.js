@@ -15,7 +15,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Мой сайт',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -29,6 +29,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/node_modules/bootstrap/dist/css/bootstrap.min.css'
   ],
   /*
   ** Plugins to load before mounting the App

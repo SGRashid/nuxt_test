@@ -1,7 +1,7 @@
 <template>
   <div class="w-100">
-      <navbar />
-    </div>
+    <h1>Hello World</h1>
+  </div>
 </template>
 
 <script>

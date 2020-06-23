@@ -15,17 +15,24 @@
 
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Avengers</a>
+          <nuxt-link class="nav-link"
+                     to="/"
+                     exact
+                     active-class="active"
+          >Home</nuxt-link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Lorem Ipsum</a>
+        <li class="nav-item ml-2">
+          <nuxt-link class="nav-link"
+                     to="/users"
+                     active-class="active"
+          >Users</nuxt-link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+        <li class="nav-item ml-2">
+          <nuxt-link class="nav-link"
+                     to="/about"
+                     active-class="active"
+          >About</nuxt-link>
         </li>
       </ul>
     </div>

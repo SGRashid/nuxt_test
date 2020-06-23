@@ -34,6 +34,12 @@
                      active-class="active"
           >About</nuxt-link>
         </li>
+        <li class="nav-item ml-2">
+          <nuxt-link class="nav-link"
+                     to="/login"
+                     active-class="active"
+          >Login</nuxt-link>
+        </li>
       </ul>
     </div>
   </nav>

@@ -2,8 +2,8 @@
   <section>
     <h1>Users</h1>
     <ul>
-      <li v-for="user of 5" :key="user">
-        <a href="#" @click.prevent="openUser(user)">User {{user}}</a>
+      <li v-for="user of users" :key="user.id">
+        <a href="#" @click.prevent="openUser(user)">User {{user.name}}</a>
       </li>
     </ul>
   </section>
@@ -11,10 +11,18 @@
 
 <script>
     export default {
-      name: "index",
+      async asyncData({$axios}) {
+        const users = await $axios.$get('https://jsonplaceholder.typicode.com/users');
+        console.error(users);
+        return { users };
+      },
+      data: () => ({
+      users: []
+    }),
       methods: {
         openUser(user) {
-          this.$router.push('/users/' + user);
+          console.log(user.id);
+          this.$router.push('/users/' + user.id);
         }
       }
     }

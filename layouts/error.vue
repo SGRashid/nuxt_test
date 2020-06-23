@@ -8,7 +8,6 @@
 <script>
     export default {
         name: "error",
-      layout: 'empty'
     }
 </script>
 

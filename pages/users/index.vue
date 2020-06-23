@@ -2,8 +2,8 @@
   <section>
     <h1>Users</h1>
     <ul>
-      <li v-for="user of 5">
-        <a href="#">User</a>
+      <li v-for="user of 5" :key="user">
+        <a href="#" @click.prevent="openUser(user)">User {{user}}</a>
       </li>
     </ul>
   </section>
@@ -11,7 +11,12 @@
 
 <script>
     export default {
-        name: "index"
+      name: "index",
+      methods: {
+        openUser(user) {
+          this.$router.push('/users/' + user);
+        }
+      }
     }
 </script>
 
